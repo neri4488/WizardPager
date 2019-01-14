@@ -2,9 +2,10 @@
 buildscript {
     repositories {
         jcenter()
+        google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.0.1'
+        classpath 'com.android.tools.build:gradle:3.2.1'
     }
 }
 
@@ -19,12 +20,13 @@ allprojects {
     repositories {
         //maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
         mavenCentral()
+        google()
     }
 }
 
-ext.compileSdkVersion=21
-ext.buildToolsVersion="21.1.2"
-ext.minSdkVersion=8
-ext.targetSdkVersion=21
+ext.compileSdkVersion=28
+ext.buildToolsVersion="28.0.0"
+ext.minSdkVersion=14
+ext.targetSdkVersion=28
 ext.sourceCompatibility=JavaVersion.VERSION_1_7
 ext.targetCompatibility =JavaVersion.VERSION_1_7

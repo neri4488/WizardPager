@@ -24,7 +24,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.TypedValue;
 import android.view.View;
@@ -40,7 +40,7 @@ import com.tech.freak.wizardpager.ui.StepPagerStrip;
 
 import java.util.List;
 
-public class MainActivity extends ActionBarActivity implements
+public class MainActivity extends AppCompatActivity implements
         PageFragmentCallbacks, ReviewFragment.Callbacks, ModelCallbacks {
     private ViewPager mPager;
     private MyPagerAdapter mPagerAdapter;
@@ -61,7 +61,7 @@ public class MainActivity extends ActionBarActivity implements
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.action_bar);
+        Toolbar toolbar = findViewById(R.id.action_bar);
         setSupportActionBar(toolbar);
 
         if (savedInstanceState != null) {
